@@ -1,3 +1,4 @@
+#coding: utf-8
 require 'spec_helper'
 
 # Specs in this file have access to a helper object that includes
@@ -10,6 +11,21 @@ require 'spec_helper'
 #     end
 #   end
 # end
-describe CashflowsHelper do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+
+
+describe "calculate_tax_inclusive_amount" do
+	context "キャッシュフローが収入で非課税の場合" do
+		before do
+			@cashflow = Cashflow.new()
+			@cashflow.isIncome = true
+			@cashflow.amount = 1000
+		end
+		
+		it "金額は１０００で税込金額も１０００になる、" do
+			helper.calculate_tax_inclusive_amount(@cashflow).should == 1000
+		end
+
+
+	end
 end
