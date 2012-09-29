@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120929053522) do
+ActiveRecord::Schema.define(:version => 20120929072827) do
 
   create_table "cashflows", :force => true do |t|
     t.integer  "amount"
@@ -19,9 +19,10 @@ ActiveRecord::Schema.define(:version => 20120929053522) do
     t.integer  "unit"
     t.string   "description"
     t.boolean  "isIncome"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
     t.date     "date"
+    t.boolean  "isTaxIncluded"
   end
 
 end

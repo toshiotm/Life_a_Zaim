@@ -16,4 +16,10 @@ module CashflowsHelper
 
           units[val.to_s]
 	end
+
+	def calculate_tax_inclusive_amount(cashflow)
+          return cashflow.amount if cashflow.isIncome || cashflow.isTaxIncluded
+          cashflow.amount + (cashflow.amount * 0.05).to_i
+	end
+        
 end
