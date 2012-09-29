@@ -1,4 +1,6 @@
 LifeAZaim::Application.routes.draw do
+  resources :cashflows
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
