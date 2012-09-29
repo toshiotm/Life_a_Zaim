@@ -16,4 +16,5 @@ module CashflowsHelper
 
           units[val.to_s]
 	end
+
 end
