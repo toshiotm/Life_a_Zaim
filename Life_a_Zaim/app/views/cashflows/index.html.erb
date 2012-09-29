@@ -9,6 +9,7 @@
     <th>Isincome</th>
     <th>IsTaxIncluded</th>
     <th>Date</th>
+    <th>TaxInclusiveAmount</th>
     <th></th>
     <th></th>
     <th></th>
@@ -23,6 +24,7 @@
     <td><%= cashflow.isIncome %></td>
     <td><%= cashflow.isTaxIncluded %></td>
     <td><%= cashflow.date %></td>
+    <td><%= calculate_tax_inclusive_amount cashflow %></td>
     <td><%= link_to 'Show', cashflow %></td>
     <td><%= link_to 'Edit', edit_cashflow_path(cashflow) %></td>
     <td><%= link_to 'Destroy', cashflow, method: :delete, data: { confirm: 'Are you sure?' } %></td>
