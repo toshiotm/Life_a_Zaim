@@ -12,6 +12,7 @@
 # It's strongly recommended to check this file into your version control system.
 
 ActiveRecord::Schema.define(:version => 20120929053522) do
+
   create_table "cashflows", :force => true do |t|
     t.integer  "amount"
     t.string   "category"
