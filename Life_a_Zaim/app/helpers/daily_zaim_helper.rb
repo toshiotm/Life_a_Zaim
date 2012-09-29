@@ -1,0 +1,2 @@
+module DailyZaimHelper
+end
